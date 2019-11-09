@@ -4,9 +4,9 @@ interface CronJobOptions {
 	cronTime: string | Date | CronTime;
 	onTick: () => void;
 	onComplete?: () => void;
-	context?: any;
 	startNow?: boolean;
 	timeZone?: string;
+	context?: any;
 	runOnInit?: boolean;
 	utcOffset?: number;
 	unrefTimeout?: any;
@@ -18,13 +18,24 @@ interface CronTimeOptions {
 	utcOffset?: number;
 }
 
+/* CronJob(
+	cronTime,
+	onTick,
+	onComplete,
+	startNow,
+	timeZone,
+	context,
+	runOnInit,
+	utcOffset,
+	unrefTimeout
+) */
 export declare function job<T>(
 	cronTime: string | Date | CronTime,
 	onTick: () => void,
 	onComplete?: () => void,
-	context?: any,
 	startNow?: boolean,
 	timeZone?: string,
+	context?: any,
 	runOnInit?: boolean,
 	utcOffset?: number,
 	unrefTimeout?: any): T;
@@ -65,9 +76,9 @@ declare class CronJob {
 		cronTime: string | Date | CronTime,
 		onTick: () => void,
 		onComplete?: () => void,
-		context?: any,
 		startNow?: boolean,
 		timeZone?: string,
+		context?: any,
 		runOnInit?: boolean,
 		utcOffset?: number,
 		unrefTimeout?: any,
