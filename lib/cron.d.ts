@@ -90,13 +90,13 @@ declare class CronJob {
 
 	setTime(time: string | CronTime): void;
 
-	nextDate(): void;
+	nextDate(): any;
 
 	fireOnTick(): void;
 
 	start(): void;
 
-	lastDate(): void;
+	lastDate(): any;
 
 	stop(): void;
 
