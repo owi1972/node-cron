@@ -1,4 +1,5 @@
 // TypeScript Version: 3.5.2
+import * as moment from "moment";
 
 interface CronJobOptions {
 	cronTime: string | Date | CronTime;
@@ -90,13 +91,13 @@ declare class CronJob {
 
 	setTime(time: string | CronTime): void;
 
-	nextDate(): any;
+	nextDate(): moment.Moment;
 
 	fireOnTick(): void;
 
 	start(): void;
 
-	lastDate(): any;
+	lastDate(): moment.Moment;
 
 	stop(): void;
 
